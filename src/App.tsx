@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Heading1 } from '@/components/Text.tsx';
+import BackgroundMusic from '@/components/BackgroundMusic.tsx';
 import Wrapper from '@/components/Wrapper.tsx';
 import Account from '@/layout/Account/Account.tsx';
 import Container from '@/layout/Container.tsx';
@@ -9,6 +10,7 @@ import Guestbook from '@/layout/Guestbook/Guestbook.tsx';
 import Invitation from '@/layout/Invitation/Invitation.tsx';
 import Location from '@/layout/Location/Location.tsx';
 import Main from '@/layout/Main/Main.tsx';
+import backgroundMusic from '@/assets/music/background-music.mp3';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,6 +38,7 @@ function App() {
 
   return (
     <Container>
+      <BackgroundMusic musicSrc={backgroundMusic} />
       <Wrapper>
         <Main />
       </Wrapper>
